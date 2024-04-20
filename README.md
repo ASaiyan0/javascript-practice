@@ -2,7 +2,7 @@
 
 ## System Requirements
 
-- Git
+- Git. If you're new to git, read [this guide](https://rogerdudler.github.io/git-guide/) and then complete [this git practice game](https://learngitbranching.js.org/).
 - Node Version Manager (nvm): https://github.com/nvm-sh/nvm
 - Node version 18: After installing nvm, run `nvm install 18` and `nvm use 18`
 
