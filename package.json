@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "chai": "^5.1.0",
+    "esm": "^3.2.25",
+    "mocha": "^10.4.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "test-all": "mocha exercise*"
+  },
+  "type": "module"
+}
