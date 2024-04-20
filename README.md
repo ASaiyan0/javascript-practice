@@ -10,7 +10,8 @@
 
 1. Clone this repository.
 2. Open a terminal and cd into the repository.
-3. Run `npm install` to install dependencies.
+3. Make sure you're using node version 18 by running `nvm use`. nvm will read the version we want from the `.nvmrc` file in the root of this repo.
+4. Run `npm install` to install dependencies.
 
 ## Completing Exercises
 
