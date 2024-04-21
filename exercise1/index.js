@@ -1,3 +1,4 @@
 export function helloWorld() {
-  // Write your code here.
+  return 'Hello World!' ;
 }
+console.log (helloWorld());
