@@ -12,7 +12,7 @@ export function reverse(array) {
 
 // Rewrite the function so that instead of returning a new array, it modifies the input array to reverse the order.
 export function reverseInPlace(array) { 
-    for (let i = 0 ; i < Math.round(array.length/2) ; i ++){
+    for (let i = 0 ; i < Math.ceil(array.length/2) ; i ++){
     let store = array[i];
     array[i] = array[array.length-i-1];
     array[array.length-1-i] = store ;   
