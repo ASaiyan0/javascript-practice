@@ -134,7 +134,7 @@ export function numberToText(n) {
       s = 'zero';
     } else if (n.length == 1) {
       onesDigit(n);
-    } else if (n.length == 2 && n[0] == 1) {
+    } else if (n.length == 2 && n[0] == '1') {
       teens(n[1]);
     } else if (n.length == 2 && n[0] != 1) {
       tensDigit(n[0]);
