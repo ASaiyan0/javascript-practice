@@ -134,15 +134,15 @@ export function numberToText(n) {
       s = 'zero';
     } else if (n.length == 1) {
       onesDigit(n);
-    } else if (n.length == 2 && n[0] == 1) {
+    } else if (n.length == 2 && n[0] == '1') {
       teens(n[1]);
-    } else if (n.length == 2 && n[0] != 1) {
+    } else if (n.length == 2 && n[0] != '1') {
       tensDigit(n[0]);
       onesDigit(n[1]);
-    } else if (n.length == 3 && n[1] == 1) {
+    } else if (n.length == 3 && n[1] == '1') {
       hundredsDigit(n[0]);
       teens(n[2]);
-    } else if (n.length == 3 && n[1] != 1) {
+    } else if (n.length == 3 && n[1] != '1') {
       hundredsDigit(n[0]);
       tensDigit(n[1]);
       onesDigit(n[2]);
