@@ -24,6 +24,8 @@ export function sumOfFirstNPositiveNumbers(n) {
  * @returns {number} n!
  */
 export function factorial(n) {
+  if (n <= 1) {return 1;}
+  return factorial(n-1) * n;
 }
 
 /**
@@ -35,4 +37,7 @@ export function factorial(n) {
  * @returns {number} The nth Fibonacci number
  */
 export function nthFibonacci(n) {
+  if (n == 1) {return 1;}
+  if (n < 1) {return 0;}
+  return nthFibonacci(n-1) + nthFibonacci(n-2);
 }
