@@ -5,6 +5,7 @@ export class TicTacToe {
    * I recommend the grid be an Array of Arrays of strings, like this: [["", "", ""], ["", "", ""], ["", "", ""]]
    */
   constructor() {
+    this.board = [["", "", ""], ["", "", ""], ["", "", ""]];
   }
 
   /**
@@ -14,6 +15,7 @@ export class TicTacToe {
    * @param {string} mark The mark to set at the given row and column, either "X" or "O".
    */
   set(row, col, mark) {
+    this.board[row][col] = mark;
   }
 
   /**
@@ -23,11 +25,13 @@ export class TicTacToe {
    * @returns {string} The mark at the given row and column, either "X", "O", or "".
    */
   get(row, col) {
+    return this.board[row][col];
   }
 
   /**
    * This method should reset the board back to an empty state.
    */
   reset() {
+    this.board = [["", "", ""], ["", "", ""], ["", "", ""]];
   }
 }
