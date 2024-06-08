@@ -6,7 +6,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "test-all": "mocha exercise*"
+    "test-all": "mocha exercise*",
+    "test-changes": "testchanges() { [ ! \"$(git diff \"${1:-master}\" -- exercise*)\" ] || mocha $(git diff --name-only \"${1:-master}\" | cut -d '/' -f 1 | grep '^exercise*' | sort -u); }; testchanges"
   },
   "type": "module"
 }
