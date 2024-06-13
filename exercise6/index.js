@@ -53,7 +53,7 @@ export class TicTacToe {
       this.set(row, col, "X");
       this.turn ++;
       }
-    if (this.get(row, col) == "" && this.turn % 2 != 0){
+    else {
       this.set(row, col, "O");
       this.turn ++;
     }
