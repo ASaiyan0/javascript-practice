@@ -98,7 +98,7 @@ export class TicTacToe {
       this.winner = "O";
       return true;
     }
-    if (this.board[2][0] == "X" && this.board[1][1] == "X" && this.board[O][2] =="X"){
+    if (this.board[2][0] == "X" && this.board[1][1] == "X" && this.board[0][2] =="X"){
       this.winner = "X";
       return true;
     }
