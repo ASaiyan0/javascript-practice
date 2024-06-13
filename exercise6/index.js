@@ -102,7 +102,7 @@ export class TicTacToe {
       this.winner = "X";
       return true;
     }
-    if (this.board[2][0] == "O" && this.board[1][1] == "O" && this.board[O][2] =="O"){
+    if (this.board[2][0] == "O" && this.board[1][1] == "O" && this.board[0][2] =="O"){
       this.winner = "O";
       return true;
     }
