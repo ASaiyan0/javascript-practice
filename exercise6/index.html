@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags define some standard stuff for the page. You don't need to worry about them. -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- This link loads the CSS file "index.css" in the same directory as this HTML file. -->
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- This script imports the JavaScript file "index.js". -->
+    <!-- type="module" means we can use "import" and "export" in the script. -->
+    <script src="./index.js" type="module"></script>
+
+    <!-- This sets the title of the page that appears in the browser tab. -->
+    <title>Tic Tac Toe!</title>
+  </head>
+
+  <!-- This is the content of the page. Do all your edits inside the body. -->
+  <body>
+    <div class="board">
+      <div class="row">
+        <button id="0-0" class="square"></button>
+        <button id="0-1" class="square"></button>
+        <button id="0-2" class="square"></button>
+      </div>
+      <div class="row">
+        <button id="1-0" class="square"></button>
+        <button id="1-1" class="square"></button>
+        <button id="1-2" class="square"></button>
+      </div>
+      <div class="row">
+        <button id="2-0" class="square"></button>
+        <button id="2-1" class="square"></button>
+        <button id="2-2" class="square"></button>
+      </div>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <button id="reset" class="reset">Reset</button>
+  </body>
+</html>

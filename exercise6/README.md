@@ -9,6 +9,7 @@ For the first part, we'll make the basic class and add the ability to set square
 ## Part 2
 
 For the second part, we're going to add the game logic: keeping track of turns, checking whether a move is valid, and detecting a win or tie. Our Tic Tac Toe game will have the standard rules, which are:
+
 - X always goes first.
 - Players alternate turns, so after X selects a square, it becomes O's turn to select a square, and then back to X.
 - If one player gets 3 squares in a row, column, or diagonal, the game ends and that player wins.
@@ -31,3 +32,15 @@ This method takes no arguments and returns true if the game is over, either due 
 ### TicTacToe.getWinner()
 
 This method takes no arguments and returns the mark of the player who won the game, "X" or "O". If no player has won, it returns an empty string "".
+
+## Part 3
+
+Now it's time to make TicTacToe into a playable game! Your goal for this final part of the exercise is to write the code needed to make your game playable and to add the CSS to make it look good.
+
+I've renamed the TicTacToe file to TicTacToe.js and added a new file, index.js. In index.js, you will write your code that runs on the page to set up your game and make it interactive. You won't need to make any more changes in TicTacToe.js (unless you're fixing a newly found bug).
+
+There are two more new files added: index.html and index.css. index.html is the HTML page. I added the basic elements you'll need for your game already. index.css contains all the CSS for the page. I've included a bit of CSS in there as an example, but you'll be adding more.
+
+I added a new dependency, so please run `npm install` again. To see your page, run the new command `npm start exercise6`. You should get a message in the terminal with a URL that you can paste in your browser. When you make changes to the code, you can refresh the page to see your updates.
+
+There are no automated tests this time. Make sure everything works and looks good, and when you're ready, make a PR as usual. I'll then look at it and test it myself. Good luck!
