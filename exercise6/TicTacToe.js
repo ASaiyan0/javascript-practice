@@ -40,16 +40,13 @@ export class TicTacToe {
   }
 
   playerMove(row, col) {
-    if (this.board.length == 0) {
-      this.turn = 0;
-      }
     if(row < 0 || row > 2){
-      return "Invalid move.";
+      return;
     }
     if (this.get(row, col) != ""){
-      return "Invalid move.";
+      return;
     }  
-    if (this.get(row, col) == "" && this.turn % 2 == 0){
+    if (this.turn % 2 == 0){
       this.set(row, col, "X");
       this.turn ++;
       }
@@ -63,15 +60,12 @@ export class TicTacToe {
     if (this.turn % 2 == 0){
       return "X";
     }
-    if (this.turn % 2 != 0){
+    else {
       return "O";
     }
   }
 
   isGameOver(){
-    if (this.turn >= 8) {
-      return true;
-    }
     for (let r = 0; r < 3; r++) {
       if (this.board[r][0] == "X" && this.board[r][1] == "X" && this.board[r][2] == "X"){
         this.winner = "X";
@@ -106,12 +100,20 @@ export class TicTacToe {
       this.winner = "O";
       return true;
     }
+    if (this.turn >= 9) {
+      return true;
+    }
     else {
       return false;
     }
   }
   getWinner(){
     this.isGameOver();
+    if(this.winner == ""){
+      return "no one";
+    }
+    else{
     return this.winner;
+    }
   }
 }
