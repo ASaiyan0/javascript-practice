@@ -11,21 +11,47 @@ window.addEventListener("load", () => {
   const messageElement = document.getElementById("message");
   const resetButton = document.getElementById("reset");
 
+  const rows = document.querySelectorAll(".row");
+
+  const boardElements = [];
+  for (const row of rows) {
+    const squares = row.querySelectorAll(".square");
+    boardElements.push(squares);
+  }
+
   // You can change the text of an element (div, button, or anything else with text) like this:
   messageElement.textContent = `${ticTacToe.getCurrentPlayer()}'s Turn`;
 
   // You can add a click event listener to a button like this:
   resetButton.addEventListener("click", () => {
     ticTacToe.reset();
+    messageElement.textContent = `${ticTacToe.getCurrentPlayer()}'s Turn`;
+    for (let r = 0; r < 3; r++) {
+      for (let c = 0; c < 3; c++) {
+        boardElements[r][c].textContent = "";
+      }
+    }
   });
-
-  console.log(
-    "Logs are printed in the browser console. Open dev tools in your browser to see them."
-  );
-  console.log(
-    "You can log variables and elements too:",
-    ticTacToe,
-    messageElement,
-    resetButton
-  );
+  for (let r = 0; r < 3; r++) {
+    for (let c = 0; c < 3; c++) {
+      boardElements[r][c].addEventListener("click", () => {
+        if (ticTacToe.isGameOver() == true) {
+          return;
+        } else if (
+          boardElements[r][c].textContent != "X" &&
+          boardElements[r][c].textContent != "O"
+        ) {
+          boardElements[r][c].textContent = `${ticTacToe.getCurrentPlayer()}`;
+          ticTacToe.playerMove(r, c);
+          console.log(ticTacToe.isGameOver());
+          messageElement.textContent = `${ticTacToe.getCurrentPlayer()}'s Turn`;
+        } else {
+          messageElement.textContent = `Invalid Move. Still ${ticTacToe.getCurrentPlayer()}'s Turn`;
+        }
+        if (ticTacToe.isGameOver() == true) {
+          messageElement.textContent = `Game Over. Winner is ${ticTacToe.getWinner()}. Reset to Play Again.`;
+        }
+      });
+    }
+  }
 });
