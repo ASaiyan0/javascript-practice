@@ -146,10 +146,6 @@ export class TicTacToe {
   }
   getWinner() {
     this.isGameOver();
-    if (this.winner == "") {
-      return;
-    } else {
       return this.winner;
     }
   }
-}
