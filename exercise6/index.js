@@ -49,7 +49,9 @@ window.addEventListener("load", () => {
           messageElement.textContent = `Invalid Move. Still ${ticTacToe.getCurrentPlayer()}'s Turn`;
         }
         if (ticTacToe.isGameOver() == true) {
-          messageElement.textContent = `Game Over. Winner is ${ticTacToe.getWinner()}. Reset to Play Again.`;
+          messageElement.textContent = `Game Over. Winner is ${
+            ticTacToe.getWinner() || "no one"
+          }. Reset to Play Again.`;
         }
       });
     }

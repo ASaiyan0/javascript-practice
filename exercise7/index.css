@@ -1,0 +1,60 @@
+body {
+  background-color: ghostwhite;
+  color: darkslategray;
+  font-family: "Schoolbell", "Comic Sans", sans-serif;
+  display: flex;
+}
+
+.vl {
+  border-left: 6px solid tomato;
+  position: absolute;
+  height: 100%;
+  left: 10%;
+  margin-left: -3px;
+  top: 0;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  top: 100px;
+}
+
+.row {
+  border-bottom: 3px solid steelblue;
+  width: 100%;
+  height: 30px;
+}
+
+.listEntry {
+  position: absolute;
+  left: 12%;
+  font-size: 24px;
+}
+
+.head {
+  border-bottom: 3px solid steelblue;
+  width: 100%;
+  height: 100px;
+}
+
+#title {
+  position: absolute;
+  left: 12%;
+  font-size: 60px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#addNew {
+  position: absolute;
+  left: 5%;
+  width: 250px;
+  top: 75px;
+}
+
+#submitNew {
+  position: absolute;
+  left: 105%;
+  top: 75px;
+}
