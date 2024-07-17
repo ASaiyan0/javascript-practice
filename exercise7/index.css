@@ -9,8 +9,7 @@ body {
   border-left: 6px solid tomato;
   position: absolute;
   height: 100%;
-  left: 10%;
-  margin-left: -3px;
+  left: calc(10% - 3px);
   top: 0;
   z-index: 1;
 }
