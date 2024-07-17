@@ -2,9 +2,7 @@
 window.addEventListener("load", () => {
   // Get all the elements on the page that have click actions or will be changed as the game is played.
   // For starters, I've added the message div and the reset button.
-  let rows = document.querySelectorAll(".row");
-  let listEntries = document.querySelectorAll(".listEntry");
-  let checkboxes = document.querySelectorAll("input[name=checkbox]");
+  let counter = 0;
   const submitButton = document.getElementById("submitNew");
   const addBox = document.getElementById("addNew");
   const container = document.querySelector(".container");
@@ -14,13 +12,13 @@ window.addEventListener("load", () => {
 
     let row = document.createElement("div");
     row.setAttribute("class", "row");
-    row.setAttribute("id", "r" + rows.length);
+    row.setAttribute("id", "r" + counter);
     container.appendChild(row);
     rows = document.querySelectorAll(".row");
 
     let list = document.createElement("div");
     list.setAttribute("class", "listEntry");
-    list.setAttribute("id", "l" + listEntries.length);
+    list.setAttribute("id", "l" + counter);
     list.innerHTML = submitText;
     row.appendChild(list);
     listEntries = document.querySelectorAll(".listEntry");
@@ -28,9 +26,11 @@ window.addEventListener("load", () => {
     let cb = document.createElement("input");
     cb.setAttribute("type", "checkbox");
     cb.setAttribute("name", "checkbox");
-    cb.setAttribute("id", "c" + checkboxes.length);
+    cb.setAttribute("id", "c" + counter);
     list.appendChild(cb);
     checkboxes = document.querySelectorAll("input[name=checkbox]");
+
+    counter++;
 
     cb.addEventListener("change", function () {
       if (this.checked) {
