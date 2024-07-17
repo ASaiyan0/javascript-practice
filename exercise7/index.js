@@ -32,17 +32,15 @@ window.addEventListener("load", () => {
     list.appendChild(cb);
     checkboxes = document.querySelectorAll("input[name=checkbox]");
 
-    for (let n = 0; n < checkboxes.length; n++) {
-      checkboxes[n].addEventListener("change", function () {
-        if (this.checked) {
-          listEntries[n].style.textDecoration = "line-through";
-          container.insertBefore(rows[n], null);
-        } else {
-          listEntries[n].style.textDecoration = "";
-          container.insertBefore(rows[n], container.firstChild);
-        }
-      });
-    }
+    cb.addEventListener("change", function () {
+      if (this.checked) {
+        list.style.textDecoration = "line-through";
+        container.insertBefore(row, null);
+      } else {
+        list.style.textDecoration = "";
+        container.insertBefore(row, container.firstChild);
+      }
+    });
 
     addBox.value = "";
   });
