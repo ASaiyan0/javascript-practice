@@ -10,25 +10,28 @@ window.addEventListener("load", () => {
   submitButton.addEventListener("click", function () {
     let submitText = addBox.value;
 
+    const checkyes = document.querySelector("input[name=checkbox]:checked");
+
     let row = document.createElement("div");
     row.setAttribute("class", "row");
     row.setAttribute("id", "r" + counter);
-    container.appendChild(row);
-    rows = document.querySelectorAll(".row");
-
+    if (checkyes) {
+      container.insertBefore(row, checkyes.parentElement.parentElement);
+    } else {
+      container.appendChild(row);
+    }
+    
     let list = document.createElement("div");
     list.setAttribute("class", "listEntry");
     list.setAttribute("id", "l" + counter);
     list.innerHTML = submitText;
     row.appendChild(list);
-    listEntries = document.querySelectorAll(".listEntry");
 
     let cb = document.createElement("input");
     cb.setAttribute("type", "checkbox");
     cb.setAttribute("name", "checkbox");
     cb.setAttribute("id", "c" + counter);
     list.appendChild(cb);
-    checkboxes = document.querySelectorAll("input[name=checkbox]");
 
     counter++;
 
