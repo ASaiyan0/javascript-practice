@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
     list.setAttribute("class", "listEntry");
     list.setAttribute("id", "l" + listEntries.length);
     list.innerHTML = submitText;
-    rows[listEntries.length].appendChild(list);
+    row.appendChild(list);
     listEntries = document.querySelectorAll(".listEntry");
 
     let cb = document.createElement("input");
