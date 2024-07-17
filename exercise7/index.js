@@ -44,6 +44,6 @@ window.addEventListener("load", () => {
       });
     }
 
-    addBox.value = "Write a new item to add to the list here!";
+    addBox.value = "";
   });
 });
