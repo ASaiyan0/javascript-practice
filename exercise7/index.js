@@ -29,7 +29,7 @@ window.addEventListener("load", () => {
     cb.setAttribute("type", "checkbox");
     cb.setAttribute("name", "checkbox");
     cb.setAttribute("id", "c" + checkboxes.length);
-    listEntries[checkboxes.length].appendChild(cb);
+    list.appendChild(cb);
     checkboxes = document.querySelectorAll("input[name=checkbox]");
 
     for (let n = 0; n < checkboxes.length; n++) {
