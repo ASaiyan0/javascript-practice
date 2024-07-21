@@ -5,7 +5,11 @@ export class TicTacToe {
    * I recommend the grid be an Array of Arrays of strings, like this: [["", "", ""], ["", "", ""], ["", "", ""]]
    */
   constructor() {
-    this.board = [["", "", ""], ["", "", ""], ["", "", ""]];
+    this.board = [
+      ["", "", ""],
+      ["", "", ""],
+      ["", "", ""],
+    ];
     this.turn = 0;
     this.winner = "";
   }
@@ -34,86 +38,114 @@ export class TicTacToe {
    * This method should reset the board back to an empty state.
    */
   reset() {
-    this.board = [["", "", ""], ["", "", ""], ["", "", ""]];
+    this.board = [
+      ["", "", ""],
+      ["", "", ""],
+      ["", "", ""],
+    ];
     this.turn = 0;
     this.winner = "";
   }
 
   playerMove(row, col) {
-    if(row < 0 || row > 2){
+    if (row < 0 || row > 2) {
       return;
     }
-    if (this.get(row, col) != ""){
+    if (this.get(row, col) != "") {
       return;
-    }  
-    if (this.turn % 2 == 0){
+    }
+    if (this.turn % 2 == 0) {
       this.set(row, col, "X");
-      this.turn ++;
-      }
-    else {
+      this.turn++;
+    } else {
       this.set(row, col, "O");
-      this.turn ++;
+      this.turn++;
     }
-  }  
+  }
 
-  getCurrentPlayer(){
-    if (this.turn % 2 == 0){
+  getCurrentPlayer() {
+    if (this.turn % 2 == 0) {
       return "X";
-    }
-    else {
+    } else {
       return "O";
     }
   }
 
-  isGameOver(){
+  isGameOver() {
     for (let r = 0; r < 3; r++) {
-      if (this.board[r][0] == "X" && this.board[r][1] == "X" && this.board[r][2] == "X"){
+      if (
+        this.board[r][0] == "X" &&
+        this.board[r][1] == "X" &&
+        this.board[r][2] == "X"
+      ) {
         this.winner = "X";
         return true;
       }
-      if (this.board[r][0] == "O" && this.board[r][1] == "O" && this.board[r][2] == "O"){
+      if (
+        this.board[r][0] == "O" &&
+        this.board[r][1] == "O" &&
+        this.board[r][2] == "O"
+      ) {
         this.winner = "O";
         return true;
       }
-      if (this.board[0][r] == "X" && this.board[1][r] == "X" && this.board[2][r] == "X"){
+      if (
+        this.board[0][r] == "X" &&
+        this.board[1][r] == "X" &&
+        this.board[2][r] == "X"
+      ) {
         this.winner = "X";
         return true;
       }
-      if (this.board[0][r] == "O" && this.board[1][r] == "O" && this.board[2][r] == "O"){
+      if (
+        this.board[0][r] == "O" &&
+        this.board[1][r] == "O" &&
+        this.board[2][r] == "O"
+      ) {
         this.winner = "O";
         return true;
       }
     }
-    if (this.board[0][0] == "X" && this.board[1][1] == "X" && this.board[2][2] =="X"){
+    if (
+      this.board[0][0] == "X" &&
+      this.board[1][1] == "X" &&
+      this.board[2][2] == "X"
+    ) {
       this.winner = "X";
       return true;
     }
-    if (this.board[0][0] == "O" && this.board[1][1] == "O" && this.board[2][2] =="O"){
+    if (
+      this.board[0][0] == "O" &&
+      this.board[1][1] == "O" &&
+      this.board[2][2] == "O"
+    ) {
       this.winner = "O";
       return true;
     }
-    if (this.board[2][0] == "X" && this.board[1][1] == "X" && this.board[0][2] =="X"){
+    if (
+      this.board[2][0] == "X" &&
+      this.board[1][1] == "X" &&
+      this.board[0][2] == "X"
+    ) {
       this.winner = "X";
       return true;
     }
-    if (this.board[2][0] == "O" && this.board[1][1] == "O" && this.board[0][2] =="O"){
+    if (
+      this.board[2][0] == "O" &&
+      this.board[1][1] == "O" &&
+      this.board[0][2] == "O"
+    ) {
       this.winner = "O";
       return true;
     }
     if (this.turn >= 9) {
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }
-  getWinner(){
+  getWinner() {
     this.isGameOver();
-    if(this.winner == ""){
-      return "no one";
-    }
-    else{
-    return this.winner;
+      return this.winner;
     }
   }
-}
