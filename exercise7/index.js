@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
     let list = document.createElement("div");
     list.setAttribute("class", "listEntry");
     list.setAttribute("id", "l" + counter);
-    list.innerHTML = submitText;
+    list.textContent = submitText;
     row.appendChild(list);
 
     let cb = document.createElement("input");
